@@ -26,4 +26,9 @@ if __name__ == '__main__':
         certfile='cert.pem', keyfile='key.pem',
     )
     ssl_context.set_alpn_protocols(['h2', 'http/1.1'])
-    app.run(host='0.0.0.0', port=5000, ssl=ssl_context)
+    app.run(
+        host='0.0.0.0', 
+        port=5000,
+        certfile='cert.pem', 
+        keyfile='key.pem'
+    )
