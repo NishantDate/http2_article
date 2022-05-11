@@ -4,7 +4,7 @@ from quart import make_response, Quart, render_template, url_for
 
 app = Quart(__name__)
 
-@app.route('/stack_colors', methods=["GET"])
+@app.route('/stack_colors')
 async def index():
     result = await render_template('index.html')
     response = await make_response(result)
